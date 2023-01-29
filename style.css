@@ -1,0 +1,945 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Righteous&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+@font-face {
+    font-family: "Geometos Neue Ultra";
+    src: url(assets/fonts/Fontspring-DEMO-geometos_neue_ultra.otf) format("OpenType");
+}
+
+@font-face {
+    font-family: "TT Backwards Ultra";
+    src: url(assets/fonts/TT\ Backwards\ Script-Bold.ttf) format("OpenType");
+}
+
+@font-face {
+    font-family: "BROTHERS";
+    src: url(assets/fonts/BROTHERS.otf) format("OpenType");
+}
+
+@font-face {
+    font-family: "Iron&Brine";
+    src: url(assets/fonts/Iron&Brine.ttf) format("OpenType");
+}
+
+@font-face {
+    font-family: "GazetaDemiBold";
+    src: url(assets/fonts/GazetaDemiBold.ttf) format("OpenType");
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #ae6b49 #462819;
+    scroll-behavior: smooth;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 20px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #462819;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ae6b49;
+    border-radius: 10px;
+    border: 4px solid #462819;
+}
+
+.inicio {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #181516;
+}
+
+.navbar {
+    z-index: 5;
+    position: absolute;
+    top: 2%;
+    left: 1.8%;
+}
+
+.navbar .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+.navbar .marca {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.navbar .marca img {
+    width: 4.5rem;
+}
+
+.navbar .marca span:nth-child(1) {
+    color: WHITE;
+    font-size: 1.8rem;
+    font-family: "Geometos Neue Ultra";
+}
+
+.navbar .marca span:nth-child(2) {
+    margin-top: -0.8rem;
+    color: WHITE;
+    font-size: 1.35rem;
+    font-family: "Geometos Neue Ultra";
+}
+
+.navbar .botoes {
+    font-family: "GazetaDemiBold";
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar .botoes a {
+    transform: scaleY(0.9);
+    color: white;
+    font-size: 1.5rem;
+    padding: .3rem;
+
+    background: linear-gradient(to right, white 50%, rgba(0, 0, 0, 0) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .3s ease;
+}
+
+.navbar .botoes a:hover {
+    color: black;
+    background-position: left bottom;
+}
+
+
+.textos {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.inicio .conteudo {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.inicio .conteudo .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.inicio .conteudo .container .box-texto,
+.inicio .conteudo .container .box-imagem {
+    position: absolute;
+
+}
+
+.inicio .conteudo .container .box-texto {
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-left: 3.2rem;
+
+}
+
+.inicio .conteudo .container .box-texto .text1 span:nth-child(1) {
+    font-family: "Geometos Neue Ultra";
+    font-size: 8vw;
+    color: white;
+}
+
+.inicio .conteudo .container .box-texto .text2 {
+    margin-top: -6vw;
+}
+
+.inicio .conteudo .container .box-texto .text2 span:nth-child(1) {
+    font-family: "Geometos Neue Ultra";
+    font-size: 5vw;
+    color: white;
+}
+
+.inicio .conteudo .container .box-texto .text2 span:nth-child(2) {
+    font-family: "TT Backwards Ultra";
+    font-size: 8vw;
+    color: #AE6B49;
+    ;
+    text-shadow: 0px -10px 20px #000000b7;
+}
+
+.inicio .conteudo .container .box-texto .descricao {
+    padding-top: 0.2rem;
+    max-width: 35vw;
+    color: white;
+    font-size: 1.05vw;
+    line-height: 1.6rem;
+    font-family: "GazetaDemiBold";
+    overflow-wrap: break-word;
+}
+
+.inicio .conteudo .container .box-texto .botoes {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.inicio .conteudo .container .box-texto .botoes button {
+    font-family: "GazetaDemiBold";
+    font-size: 1.6rem;
+    padding: 0.4rem;
+    padding-inline: 1.2rem;
+    border: 0px;
+    color: black;
+    background-color: #AE6B49;
+    cursor: pointer;
+
+    background: linear-gradient(to right, #462819 50%, #AE6B49 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .3s ease;
+}
+
+.inicio .conteudo .container .box-texto .botoes button:hover {
+    color: white;
+    background-position: left bottom;
+}
+
+.inicio .conteudo .container .box-imagem {
+    display: flex;
+    right: 0;
+    justify-content: center;
+    padding-right: 10vw;
+    padding-bottom: 2rem;
+}
+
+.inicio .conteudo .container .box-imagem img {
+    width: 30vw;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.inicio .conteudo .container .box-texto .socials {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    position: absolute;
+    bottom: 3%;
+}
+
+.inicio .conteudo .container .box-texto .socials .social {
+    font-family: "Fredoka";
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.inicio .conteudo .container .box-texto .socials .social:hover{
+    transform: translateY(10%);
+}
+
+.inicio .conteudo .container .box-texto .socials .social span {
+    transform: scaleY(1.02);
+}
+
+.inicio .conteudo .container .box-texto .socials .social i {
+    font-size: 1.6rem;
+    color: black;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+
+}
+
+.inicio .conteudo .container .box-texto .socials .social .fa-linkedin {
+    transform: scaleY(0.95);
+}
+
+
+
+
+.inicio .fundo .marca-cafe1 img {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 20rem;
+}
+
+.inicio .fundo .marca-cafe2 img {
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: 0;
+    width: 20rem;
+}
+
+.inicio .fundo .marca-lines img {
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    top: 50%;
+    width: 20rem;
+    transform: translate(0, -50%);
+}
+
+/*SESSÃO PRODUTO*/
+
+.produto {
+    width: 100%;
+    height: 65vh;
+    background-color: #4d2719;
+    position: relative;
+}
+
+.produto .conteudo{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.produto .conteudo .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 6rem;
+}
+
+.produto .conteudo .container header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    color: #F1F1F1;
+    font-family: "GazetaDemiBold";
+}
+
+.produto .conteudo .container header h5{
+    color: #AE6B49;
+}
+
+.produto .conteudo .container .cards{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.produto .conteudo .container .cards .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 1.2rem;
+    color: #F1f1f1;
+    width: 18rem;
+    overflow-wrap: break-word;
+    background-color: #ae6b4918;
+    border-radius: 1rem;
+    padding: 3rem;
+    padding-inline: 1rem;
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+    cursor: default;
+    min-height: 12rem;
+    max-height: 12rem;
+    
+}
+
+.produto .conteudo .container .cards .card:hover{
+    background-color: #ae6b4957;
+    
+}
+
+.produto .conteudo .container .cards .card img{
+    width: 4rem;
+    filter: invert(100%);
+}
+
+.produto .conteudo .container .cards .card h2{
+    font-size: 1.6rem;
+}
+
+
+.produto .fundo .marca-lines img {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    bottom: 0;
+    width: 16rem;
+    opacity: 0.2;
+    transform: scale(-1);
+}
+
+/*SESSÃO menu*/
+
+.menu{
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #181516;
+}
+
+.menu .fundo .marca-cafe1 img {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 20rem;
+}
+
+.menu .fundo .marca-cafe2 img {
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: 0;
+    width: 20rem;
+}
+
+.menu .conteudo, .menu .conteudo .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .conteudo .container header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 12rem;
+    font-size: 2rem;
+    color: #F1F1F1;
+    font-family: "GazetaDemiBold";
+}
+
+.menu .conteudo .container header h5{
+    color: #AE6B49;
+}
+
+.container-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-cards .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+    grid-gap: 2rem;
+}
+
+.container-cards .cards .card{
+    width: 16rem;
+    background-color: #1D1D1D;
+    cursor: pointer;
+    transition: 0.25s all ease;
+
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.411);
+-moz-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.411);
+box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.411);
+}
+
+.container-cards .cards .card:hover{
+    transform: scale(1.05);
+}
+
+.container-cards .cards .card img{
+    width: 16rem;
+    height: 14rem;
+    object-fit: cover;
+}
+
+.container-cards .cards .card .titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #f1f1f1;
+    font-family: "GazetaDemiBold";
+    align-items: center;
+    margin: 0.6rem;
+    margin-inline: 1rem;
+    margin-top: 0.85rem;
+    font-size: 1rem;
+}
+
+.container-cards .cards .card .descricao{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.6rem;
+    margin-inline: 1rem;
+    margin-bottom: 1.1rem;
+    color: #f1f1f1;
+    font-family: "GazetaDemiBold";
+}
+
+.container-cards .cards .card .descricao .first{
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    font-size: 0.9rem;
+    color: rgb(180, 180, 180);
+}
+
+.container-cards .cards .card .descricao .first i{
+    color: #AE6B49;
+}
+
+.container-cards .cards .card .descricao .second{
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    font-size: 0.9rem;
+    color: rgb(180, 180, 180);
+}
+
+.clientes {
+    width: 100%;
+    height: 100vh;
+    background-color: #4d2719;
+    position: relative;
+}
+
+.clientes .conteudo{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.clientes .conteudo .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 6rem;
+}
+
+.clientes .conteudo .container header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    color: #F1F1F1;
+    font-family: "GazetaDemiBold";
+}
+
+.clientes .conteudo .container header h5{
+    color: #AE6B49;
+}
+
+.clientes .conteudo .container .cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 2rem;
+}
+
+.clientes .conteudo .container .cards .card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2rem;
+    background-color: #00000034;
+    gap: 2rem;
+    width: 38rem;
+    min-width: 38rem;
+    min-height: 12rem;
+    max-height: 12rem;
+    border-radius: 0.8rem;
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+    cursor: default;
+}
+
+.clientes .conteudo .container .cards .card:hover{
+    background-color: #00000052;
+}
+
+
+.clientes .conteudo .container .cards .card h1{
+    position: absolute;
+    font-size: 5.6rem;
+    top: -4vh;
+    left: 1.1vw;
+}
+
+.clientes .conteudo .container .cards .card .user{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-start;
+    align-items: flex-start;
+    gap: 0.4rem;
+}
+
+.clientes .conteudo .container .cards .card span{
+    line-height: 1.5rem;
+    min-height: 7rem;
+    max-height: 7rem;
+}
+
+.clientes .conteudo .container .cards .card .stars{
+    color: #ae6b49;
+}
+
+
+.sobre{
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #181516;
+}
+
+.sobre .fundo .marca-cafe1 img {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 20rem;
+}
+
+.sobre .fundo .marca-cafe2 img {
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: 0;
+    width: 20rem;
+}
+
+.sobre .conteudo, .sobre .conteudo .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.sobre .conteudo .container header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: #F1F1F1;
+    font-family: "GazetaDemiBold";
+}
+
+.sobre .conteudo .container header h5{
+    color: #AE6B49;
+}
+
+.sobre .conteudo .container article{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.sobre .conteudo .container .imagem img{
+    width: 36rem;
+}
+
+.sobre .conteudo .container .textos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: 40rem;
+    height: 40rem;
+    color: #f1f1f1;
+    font-family: "GazetaDemiBold";
+}
+
+.sobre .conteudo .container .textos h1{
+    color: #AE6B49;
+    font-size: 5rem;
+}
+
+.sobre .conteudo .container .textos p{
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+    width: 30rem;
+}
+
+.sobre .conteudo .container .textos .pontos-fortes{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    gap: 0.9rem;
+}
+
+.sobre .conteudo .container .textos .pontos-fortes i{
+    color:#AE6B49 ;
+    font-size: 0.9rem;
+}
+
+.contato {
+    width: 100%;
+    height: 100vh;
+    background-color: #4d2719;
+    position: relative;
+}
+
+.contato .conteudo{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.contato .conteudo .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    gap: 6rem;
+}
+
+.contato .conteudo header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 10rem;
+    font-size: 2rem;
+    color: #F1F1F1;
+    font-family: "GazetaDemiBold";
+}
+
+.contato .conteudo header h5{
+    color: #AE6B49;
+}
+
+.contato .conteudo .container .contatinho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato .conteudo .container .contatinho form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 30rem;
+}
+
+.contato .conteudo .container .contatinho form .input{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contato .conteudo .container .contatinho form .input input{
+    border: 0px;
+    background: none;
+    border-bottom: 2px solid #AE6B49;
+    padding: 1rem;
+    width: 100%;
+    outline: none;
+    font-size: 1.1rem;
+    color: #f1f1f1;
+    box-sizing: border-box;
+    font-family: "GazetaDemiBold";
+    transition: 0.3s all ease;
+}
+
+.contato .conteudo .container .contatinho form .input input:focus, .contato .conteudo .container .contatinho form .input input:hover{
+
+    padding: 1rem;
+    padding-inline-start: 0rem;
+    padding-inline-end: 2rem;
+
+}
+
+.contato .conteudo .container .contatinho form .input input::placeholder{
+    font-family: "GazetaDemiBold";
+    color: #979797
+}
+
+.contato .conteudo .container .contatinho form .input-mensagem{
+    width: 100%;
+    font-family: "GazetaDemiBold";
+}
+
+.contato .conteudo .container .contatinho form .input-mensagem textarea{
+    border: 0px;
+    width: 100%;
+    max-width: 100%;
+    background: none;
+    border-bottom: 2px solid #AE6B49;
+    padding: 1rem;
+    width: 100%;
+    outline: none;
+    font-size: 1.1rem;
+    color: #f1f1f1;
+    resize: none;
+    box-sizing: border-box;
+    font-family: "GazetaDemiBold";
+    transition: 0.3s all ease;
+
+}
+.contato .conteudo .container .contatinho form .input-mensagem textarea:focus, .contato .conteudo .container .contatinho form .input-mensagem textarea:hover {
+padding: 1rem;
+padding-inline-start: 0rem;
+padding-inline-end: 2rem;
+
+}
+
+.contato .conteudo .container .contatinho form .input-mensagem textarea::placeholder{
+    font-family: "GazetaDemiBold";
+    color: #979797
+}
+
+.contato .conteudo .container .contatinho form .botao{
+    width: 100%;
+}
+
+.contato .conteudo .container .contatinho form .botao button{
+    margin-top: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: #AE6B49;
+    color: white;
+    border: 0px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-family: "GazetaDemiBold";
+    transition: 0.3s all ease;
+}
+
+.contato .conteudo .container .contatinho form .botao button:hover{
+    background-color: #995b3f;
+    transform: translateY(8%);
+}
+
+.rodape{
+    width: 100%;
+    padding: 2rem 0;
+    background-color: #422115
+}
+
+.rodape .conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+}
+
+.coluna{
+    display: flex;
+    flex-direction: column;
+}
+
+.rodape .conteudo .info .reto .logo{
+    font-family: "Geometos Neue Ultra";
+    font-size: 2rem;
+    color: white;
+}
+
+.rodape .conteudo .divisoria{
+    width: 80%;
+    height: 2px;
+    background-color: #AE6B49;
+}
+
+.rodape .conteudo .social{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "GazetaDemiBold";
+    gap: 2rem;
+}
+
+.rodape .conteudo .social .icons{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.rodape .conteudo .social i {
+    font-size: 1.8rem;
+    padding: 1rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    cursor: pointer;
+}
